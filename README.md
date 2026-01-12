@@ -1,6 +1,6 @@
 # 🏗️ Real-Time Helmet Detection & Construction Site Safety Monitoring System
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.8+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-00D4AA)](https://github.com/ultralytics/ultralytics)
 
@@ -363,9 +363,8 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 ## 📧 **Contact**
 
 For business inquiries or support:
-- Email: your.email@example.com
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
-- Website: [yourwebsite.com](https://yourwebsite.com)
+- Email: vignesh246v@gmail.com
+- LinkedIn: [Your Profile](https://www.linkedin.com/in/vignesh246v-ai-engineer/)
 
 ---
 
@@ -391,4 +390,5 @@ If this project helped you, please give it a ⭐ star!
 
 ---
 
-**Built with ❤️ by a Senior Computer Vision & AI Engineer**#
+**Built with ❤️ by Vignesh**#
+
