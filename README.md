@@ -391,5 +391,6 @@ If this project helped you, please give it a ⭐ star!
 
 ---
 
-**Built with ❤️ by a Senior Computer Vision & AI Engineer**#   R e a l - T i m e - H e l m e t - D e t e c t i o n - C o n s t r u c t i o n - S i t e - S a f e t y - M o n i t o r i n g - S y s t e m  
+**Built with ❤️ by a Senior Computer Vision & AI Engineer**#   R e a l - T i m e - H e l m e t - D e t e c t i o n - C o n s t r u c t i o n - S i t e - S a f e t y - M o n i t o r i n g - S y s t e m 
+ 
  
