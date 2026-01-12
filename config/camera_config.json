@@ -1,0 +1,145 @@
+{
+  "cameras": [
+    {
+      "id": "CAM_001",
+      "name": "Main Entrance",
+      "source": 0,
+      "type": "webcam",
+      "enabled": true,
+      "location": {
+        "zone": "entrance",
+        "floor": 1,
+        "coordinates": {
+          "latitude": 0.0,
+          "longitude": 0.0
+        }
+      },
+      "settings": {
+        "resolution": {
+          "width": 1280,
+          "height": 720
+        },
+        "fps": 30,
+        "rotation": 0,
+        "flip_horizontal": false,
+        "flip_vertical": false
+      },
+      "detection": {
+        "confidence_threshold": 0.5,
+        "roi": null
+      }
+    },
+    {
+      "id": "CAM_002",
+      "name": "Construction Area 1",
+      "source": "rtsp://192.168.1.100:554/stream1",
+      "type": "ip_camera",
+      "enabled": false,
+      "location": {
+        "zone": "construction_area_1",
+        "floor": 1,
+        "coordinates": {
+          "latitude": 0.0,
+          "longitude": 0.0
+        }
+      },
+      "settings": {
+        "resolution": {
+          "width": 1920,
+          "height": 1080
+        },
+        "fps": 25,
+        "rotation": 0,
+        "flip_horizontal": false,
+        "flip_vertical": false
+      },
+      "detection": {
+        "confidence_threshold": 0.55,
+        "roi": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "authentication": {
+        "username": "admin",
+        "password": "password123"
+      }
+    },
+    {
+      "id": "CAM_003",
+      "name": "Loading Bay",
+      "source": "rtsp://192.168.1.101:554/stream1",
+      "type": "ip_camera",
+      "enabled": false,
+      "location": {
+        "zone": "loading_bay",
+        "floor": 1,
+        "coordinates": {
+          "latitude": 0.0,
+          "longitude": 0.0
+        }
+      },
+      "settings": {
+        "resolution": {
+          "width": 1920,
+          "height": 1080
+        },
+        "fps": 25,
+        "rotation": 0,
+        "flip_horizontal": false,
+        "flip_vertical": false
+      },
+      "detection": {
+        "confidence_threshold": 0.5,
+        "roi": null
+      },
+      "authentication": {
+        "username": "admin",
+        "password": "password123"
+      }
+    },
+    {
+      "id": "CAM_004",
+      "name": "Upper Level",
+      "source": "rtsp://192.168.1.102:554/stream1",
+      "type": "ip_camera",
+      "enabled": false,
+      "location": {
+        "zone": "upper_level",
+        "floor": 2,
+        "coordinates": {
+          "latitude": 0.0,
+          "longitude": 0.0
+        }
+      },
+      "settings": {
+        "resolution": {
+          "width": 1280,
+          "height": 720
+        },
+        "fps": 30,
+        "rotation": 0,
+        "flip_horizontal": false,
+        "flip_vertical": false
+      },
+      "detection": {
+        "confidence_threshold": 0.5,
+        "roi": null
+      },
+      "authentication": {
+        "username": "admin",
+        "password": "password123"
+      }
+    }
+  ],
+  "global_settings": {
+    "reconnect_attempts": 3,
+    "reconnect_delay": 5,
+    "frame_timeout": 10,
+    "enable_recording": false,
+    "recording_duration": 3600,
+    "snapshot_interval": 300
+  }
+}

@@ -1,0 +1,133 @@
+# Helmet Detection System Configuration
+
+# Model Configuration
+model:
+  name: "yolov8n"  # Options: yolov8n, yolov8s, yolov8m
+  weights_path: "models/helmet_detector.pt"
+  input_size: 640
+  confidence_threshold: 0.5
+  iou_threshold: 0.45
+  device: "cuda"  # Options: cuda, cpu, mps
+  half_precision: true  # FP16 for faster inference
+  
+# Class Configuration
+classes:
+  helmet: 0
+  no_helmet: 1
+  person: 2  # Optional
+  
+class_names:
+  - "Helmet"
+  - "No-Helmet"
+  - "Person"
+
+# Video Stream Configuration
+video:
+  default_source: 0  # 0 for webcam
+  resolution:
+    width: 1280
+    height: 720
+  fps: 30
+  frame_skip: 2  # Process every Nth frame for performance
+  buffer_size: 64
+  
+# Detection Configuration
+detection:
+  enable_tracking: true
+  track_buffer_size: 30
+  min_box_area: 400  # Minimum bounding box area in pixels
+  max_detections: 50  # Maximum detections per frame
+  
+# Violation Configuration
+violation:
+  min_confidence: 0.6  # Minimum confidence to trigger violation
+  cooldown_seconds: 5  # Minimum time between violations for same person
+  snapshot_enabled: true
+  snapshot_quality: 95  # JPEG quality (0-100)
+  alert_sound_enabled: true
+  alert_sound_path: "data/sounds/alert.mp3"
+  
+# Alert Configuration
+alerts:
+  visual_enabled: true
+  audio_enabled: true
+  email_enabled: false
+  sms_enabled: false
+  webhook_enabled: false
+  webhook_url: ""
+  
+# Storage Configuration
+storage:
+  database_path: "data/violations.db"
+  snapshots_dir: "outputs/snapshots"
+  videos_dir: "outputs/videos"
+  reports_dir: "outputs/reports"
+  logs_dir: "data/logs"
+  max_snapshot_age_days: 30  # Auto-delete old snapshots
+  
+# Report Configuration
+reports:
+  auto_generate_daily: true
+  auto_generate_weekly: true
+  report_time: "23:59"  # HH:MM format
+  include_snapshots: true
+  export_formats:
+    - "csv"
+    - "pdf"
+  
+# Dashboard Configuration
+dashboard:
+  port: 8501
+  theme: "dark"  # Options: light, dark
+  refresh_rate: 1  # seconds
+  max_display_violations: 100
+  
+# Performance Configuration
+performance:
+  use_multiprocessing: true
+  num_workers: 2
+  gpu_batch_size: 4
+  enable_tensorrt: false  # Requires TensorRT installation
+  
+# Preprocessing Configuration
+preprocessing:
+  enable_low_light_enhancement: true
+  enable_noise_reduction: true
+  clahe_clip_limit: 2.0
+  clahe_tile_size: 8
+  
+# Logging Configuration
+logging:
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR
+  console_output: true
+  file_output: true
+  max_log_size_mb: 10
+  backup_count: 5
+  
+# Camera Configuration (Multi-camera support)
+cameras:
+  - id: "CAM_001"
+    name: "Main Entrance"
+    source: 0
+    enabled: true
+    zone: "entrance"
+    
+  - id: "CAM_002"
+    name: "Construction Area 1"
+    source: "rtsp://192.168.1.100:554/stream"
+    enabled: false
+    zone: "area_1"
+    
+  - id: "CAM_003"
+    name: "Loading Bay"
+    source: "rtsp://192.168.1.101:554/stream"
+    enabled: false
+    zone: "loading"
+
+# System Configuration
+system:
+  app_name: "Helmet Detection System"
+  version: "1.0.0"
+  debug_mode: false
+  save_annotated_frames: false
+  display_fps: true

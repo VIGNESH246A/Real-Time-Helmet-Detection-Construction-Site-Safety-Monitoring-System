@@ -1,0 +1,56 @@
+# Core Dependencies
+ultralytics
+opencv-python
+opencv-contrib-python
+numpy
+torch
+torchvision
+
+# Database & Storage
+Pillow
+
+# Dashboard & Visualization
+streamlit
+plotly
+pandas
+
+# Report Generation
+reportlab
+matplotlib
+
+# Utilities
+PyYAML
+python-dotenv
+requests
+
+# Video Processing
+imageio
+imageio-ffmpeg
+
+# Alert System
+pygame
+
+# Image Enhancement
+scikit-image
+albumentations
+
+# Tracking (Optional but recommended)
+filterpy
+scipy
+
+# Performance Monitoring
+psutil
+tqdm
+
+# API & Web (Optional)
+flask
+flask-cors
+
+# Testing
+pytest
+pytest-cov
+
+# Development
+black
+flake8
+ipython

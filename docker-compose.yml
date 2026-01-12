@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  # Main Detection System
+  helmet-detector:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: helmet_detection_system
+    runtime: nvidia  # For GPU support
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - ./config:/app/config
+      - ./models:/app/models
+      - ./data:/app/data
+      - ./outputs:/app/outputs
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    devices:
+      - /dev/video0:/dev/video0  # Webcam access
+    network_mode: "host"
+    restart: unless-stopped
+    command: python main.py --no-display
+    
+  # Streamlit Dashboard
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: helmet_detection_dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./config:/app/config
+      - ./data:/app/data
+      - ./outputs:/app/outputs
+    depends_on:
+      - helmet-detector
+    restart: unless-stopped
+    command: streamlit run src/ui/dashboard.py --server.port=8501 --server.address=0.0.0.0
+
+volumes:
+  model_data:
+  output_data:
