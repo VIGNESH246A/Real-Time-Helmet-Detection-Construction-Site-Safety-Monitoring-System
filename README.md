@@ -364,7 +364,7 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 
 For business inquiries or support:
 - Email: vignesh246v@gmail.com
-- LinkedIn: [Your Profile](https://www.linkedin.com/in/vignesh246v-ai-engineer/)
+- LinkedIn: [My Profile](https://www.linkedin.com/in/vignesh246v-ai-engineer/)
 
 ---
 
@@ -391,4 +391,5 @@ If this project helped you, please give it a ⭐ star!
 ---
 
 **Built with ❤️ by Vignesh**#
+
 
